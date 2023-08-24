@@ -7,7 +7,6 @@ import com.demo.jwt.backend.model.dto.SignUpDto;
 import com.demo.jwt.backend.model.dto.UserDto;
 import com.demo.jwt.backend.model.entity.UserEntity;
 import com.demo.jwt.backend.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Service;
 import java.nio.CharBuffer;
 import java.util.Optional;
 
-@RequiredArgsConstructor
 @Service
 public class UserServiceImpl implements UserService{
 
@@ -23,9 +21,15 @@ public class UserServiceImpl implements UserService{
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
 
+    public UserServiceImpl(UserRepository userRepository, UserMapper userMapper, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.userMapper = userMapper;
+        this.passwordEncoder = passwordEncoder;
+    }
+
     @Override
-    public UserDto findByLogin(String login) {
-       UserEntity user = userRepository.findByLogin(login)
+    public UserDto findByEmail(String email) {
+       UserEntity user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new AppException("Unknown user", HttpStatus.NOT_FOUND));
 
        return userMapper.toUserDto(user);
@@ -33,7 +37,7 @@ public class UserServiceImpl implements UserService{
 
     public UserDto login(CredentialsDto credentialsDto) {
 
-       UserEntity userEntity = userRepository.findByLogin(credentialsDto.getLogin())
+       UserEntity userEntity = userRepository.findByEmail(credentialsDto.getEmail())
                 .orElseThrow(() -> new AppException("Unknown user", HttpStatus.NOT_FOUND));
 
        if (passwordEncoder.matches(CharBuffer.wrap(credentialsDto.getPassword()), userEntity.getPassword())) {
@@ -44,17 +48,17 @@ public class UserServiceImpl implements UserService{
     }
 
 
-    public UserDto register(SignUpDto userDto) {
+    public UserDto register(SignUpDto signUpDto) {
 
-        Optional<UserEntity> userOpt = userRepository.findByLogin(userDto.getLogin());
+        Optional<UserEntity> userOpt = userRepository.findByEmail(signUpDto.getEmail());
 
         if (userOpt.isPresent()) {
-            throw new AppException("Username already exists", HttpStatus.BAD_REQUEST);
+            throw new AppException("This username already exists", HttpStatus.BAD_REQUEST);
         }
 
-        UserEntity userEntity = userMapper.signUpToUser(userDto);
+        UserEntity userEntity = userMapper.signUpToUser(signUpDto);
 
-        userEntity.setPassword(passwordEncoder.encode(CharBuffer.wrap(userDto.getPassword())));
+        userEntity.setPassword(passwordEncoder.encode(CharBuffer.wrap(signUpDto.getPassword())));
 
         UserEntity savedUser = userRepository.save(userEntity);
 

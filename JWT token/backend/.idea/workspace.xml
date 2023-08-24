@@ -4,7 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8753cce7-561f-4af6-a0eb-6d38ddc06db2" name="Changes" comment="" />
+    <list default="true" id="8753cce7-561f-4af6-a0eb-6d38ddc06db2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/LogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/entity/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/entity/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/repository/TokenRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/RestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/RestExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/UserAuthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/config/UserAuthProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/exception/dto/ErrorDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/exception/dto/ErrorDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/dto/CredentialsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/dto/CredentialsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/dto/SignUpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/dto/SignUpDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/model/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/web/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/jwt/backend/web/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/JwtAuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/JwtAuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/RestExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/RestExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/UserAuthProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/config/UserAuthProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/exception/dto/ErrorDto$ErrorDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/exception/dto/ErrorDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/exception/dto/ErrorDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/mapper/UserMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/mapper/UserMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/CredentialsDto$CredentialsDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/CredentialsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/CredentialsDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/SignUpDto$SignUpDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/SignUpDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/SignUpDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/UserDto$UserDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/entity/UserEntity$UserEntityBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/model/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/web/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/demo/jwt/backend/web/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/demo/jwt/backend/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/demo/jwt/backend/mapper/UserMapperImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +61,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,12 +83,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Gatio/Desktop/app-server/app/app"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Gatio/Desktop/jwt-security-server/jwt-security-server"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.demo.jwt.backend.model.entity" />
       <recent name="com.demo.jwt.backend.model.dto" />
       <recent name="com.demo.jwt.backend.mapper" />
       <recent name="com.demo.jwt.backend.config" />

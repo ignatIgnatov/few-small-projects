@@ -1,16 +1,28 @@
 package com.demo.jwt.backend.model.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Data
 public class CredentialsDto {
 
-    private String login;
+    private String email;
     private char[] password;
+
+    public CredentialsDto() {
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public CredentialsDto setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public char[] getPassword() {
+        return password;
+    }
+
+    public CredentialsDto setPassword(char[] password) {
+        this.password = password;
+        return this;
+    }
 }

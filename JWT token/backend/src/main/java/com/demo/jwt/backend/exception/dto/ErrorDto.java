@@ -1,13 +1,22 @@
 package com.demo.jwt.backend.exception.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-
-@AllArgsConstructor
-@Builder
-@Data
 public class ErrorDto {
 
     private String message;
+
+    public ErrorDto() {
+    }
+
+    public ErrorDto(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public ErrorDto setMessage(String message) {
+        this.message = message;
+        return this;
+    }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-05T15:21:26+0300",
+    date = "2023-08-23T11:32:01+0300",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 19.0.2 (Oracle Corporation)"
 )
 @Component
@@ -20,14 +20,32 @@ public class UserMapperImpl implements UserMapper {
             return null;
         }
 
-        UserDto.UserDtoBuilder userDto = UserDto.builder();
+        UserDto userDto = new UserDto();
 
-        userDto.id( userEntity.getId() );
-        userDto.firstName( userEntity.getFirstName() );
-        userDto.lastName( userEntity.getLastName() );
-        userDto.login( userEntity.getLogin() );
+        userDto.setId( userEntity.getId() );
+        userDto.setFirstName( userEntity.getFirstName() );
+        userDto.setLastName( userEntity.getLastName() );
+        userDto.setUsername( userEntity.getUsername() );
+        userDto.setEmail( userEntity.getEmail() );
 
-        return userDto.build();
+        return userDto;
+    }
+
+    @Override
+    public UserEntity toUserEntity(UserDto userDto) {
+        if ( userDto == null ) {
+            return null;
+        }
+
+        UserEntity userEntity = new UserEntity();
+
+        userEntity.setId( userDto.getId() );
+        userEntity.setFirstName( userDto.getFirstName() );
+        userEntity.setLastName( userDto.getLastName() );
+        userEntity.setUsername( userDto.getUsername() );
+        userEntity.setEmail( userDto.getEmail() );
+
+        return userEntity;
     }
 
     @Override
@@ -36,12 +54,13 @@ public class UserMapperImpl implements UserMapper {
             return null;
         }
 
-        UserEntity.UserEntityBuilder userEntity = UserEntity.builder();
+        UserEntity userEntity = new UserEntity();
 
-        userEntity.firstName( userDto.getFirstName() );
-        userEntity.lastName( userDto.getLastName() );
-        userEntity.login( userDto.getLogin() );
+        userEntity.setFirstName( userDto.getFirstName() );
+        userEntity.setLastName( userDto.getLastName() );
+        userEntity.setUsername( userDto.getUsername() );
+        userEntity.setEmail( userDto.getEmail() );
 
-        return userEntity.build();
+        return userEntity;
     }
 }

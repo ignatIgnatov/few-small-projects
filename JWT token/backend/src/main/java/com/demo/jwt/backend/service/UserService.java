@@ -6,9 +6,9 @@ import com.demo.jwt.backend.model.dto.UserDto;
 
 public interface UserService {
 
-    UserDto findByLogin(String login);
+    UserDto findByEmail(String email);
 
-    UserDto register(SignUpDto userDto);
+    UserDto register(SignUpDto signUpDto);
 
     UserDto login(CredentialsDto credentialsDto);
 }
