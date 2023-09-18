@@ -1,0 +1,28 @@
+example:
+    app:
+        jwtCookieName: appCookie
+        jwtExpirationMs: 30000
+        jwtSecret: setPassword=setPassword=setPassword=setPassword=setPassword=setPassword=setPassword
+spring:
+    datasource:
+        password: 1423
+        url: jdbc:mysql://localhost:3306/app_server_db?useSSL=false&createDatabaseIfNotExist=true
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+
+    mail:
+        host: smtp.gmail.com
+        password: '${EMAIL_SECRET}'
+        port: 587
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+        username: '${MY_EMAIL}'
