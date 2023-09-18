@@ -9,7 +9,17 @@ spring:
         properties:
             hibernate:
                 dialect: org.hibernate.dialect.MySQLDialect
-
+    mail:
+        host: smtp.gmail.com
+        password: '${EMAIL_SECRET}'
+        port: 587
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+        username: '${MY_EMAIL}'
 
 application:
     security:
@@ -18,3 +28,5 @@ application:
             expiration: 86400000 # 1 day
             refresh-token:
                 expiration: 604800000 # 7 days
+
+

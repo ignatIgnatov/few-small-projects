@@ -35,6 +35,11 @@ public class UserEntity implements UserDetails {
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
 
+    @Column(name = "verification_code", length = 64)
+    private String verificationCode;
+
+    private boolean enabled;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -68,6 +73,6 @@ public class UserEntity implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return this.enabled;
     }
 }
